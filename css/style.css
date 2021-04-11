@@ -1,0 +1,329 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    font-size: 18px;
+    color: #fff;
+}
+/* ================================================================================== */
+/* ================================================================================== */
+/* The same STYLE */
+img, button, h2, .task, h3, .item, label, input, select, option, .bill, .general, .logoutCashier{
+    cursor: pointer;
+}
+h3,
+.menu,
+.task,
+.loginPage,
+.adminPage,
+.cashierPage,
+.booking,
+.item,
+.info,
+form div,
+.filter{
+    display: flex;
+    align-items: center;
+}
+.loginPage,
+.adminPage,
+.cashierPage{
+    height: 100%;
+    background: rgb(152, 76, 196);
+}
+.img,
+.loginOption{
+    width: 50%;
+    text-align: center;
+}
+img{
+    width: 80%;
+}
+#logo{
+    width: 20%;
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+.loginOption h2{
+    margin-bottom: 100px;
+}
+button,
+.sortBtn,
+.sortBtn option{
+    background: rgb(24, 147, 218);
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    margin-top: 8px;
+}
+/* ================================================================================== */
+/* ================================================================================== */
+
+.adminPage{
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgba(56, 55, 56, 0.918);
+}
+.menu{
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #fff;
+    position: sticky;
+    top: 0;
+}
+.information{
+    width: 73%;
+    height: 100%;
+    border-left: 1px solid #fff;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.task{
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 20px;
+    text-transform: uppercase;
+    height: 50px;
+    padding: 5px 5px 5px 20px;
+    margin-bottom: 5px;
+}
+.noBooking,
+.staffMgt,
+.partner{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.task:hover{
+    background: rgb(56, 55, 56);
+    border-bottom: 1px solid white;
+}
+h3{
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background: yellow;
+    color: black;
+    padding: 10px;
+    margin-top: 0;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* ________________________Each Item Card Of Each Product________________________*/
+.proList{
+    text-align: center;
+}
+.item{
+    position: relative;
+    justify-content: space-between;
+    margin: 10px 15%;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(233, 150, 233, 0.164);
+}
+.item:hover{
+    border-bottom: 1px solid white;
+}
+.description {
+    visibility: hidden;
+    width: 250px;
+    background: rgba(56, 55, 56, 0.959);
+    text-align: center;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    top: 100%;
+    left: -20%;
+    transition: 0.3s;
+}
+.item:hover .description {
+    visibility: visible;
+    opacity: 1;
+}
+.info{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 55%;
+}
+.price,
+.modify,
+.category{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edit,
+.delete{
+    padding: 5px;
+}
+.name,
+.id,
+.date,
+.amount{
+    width: 50%;
+}
+.delivered,
+.numInbox,
+.numPro{
+    background: red;
+    border-radius: 5px;
+    padding: 2px;
+}
+/* ________________________Form To Add New Product In Stock________________________*/
+.addInfo{
+    width: 70%;
+    margin: auto;
+    padding: 15px;
+    background: rgba(233, 150, 233, 0.164);
+    border-radius: 15px;
+}
+form div{
+    justify-content: space-between;
+    padding: 10px;
+}
+input,
+select,
+textarea{
+    width: 60%;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.185);
+    color: #fff;
+    font-size: 18px;
+}
+textarea{
+    resize: none;
+    width: 70%;
+    height: 50px;
+}
+option{
+    color: #000;
+}
+
+/* __________Search box_________________________________________ */
+#searchBox{
+    width: 50%;
+    height: 50px;
+    background: rgba(56, 55, 56, 0.918);;
+    border: 1px solid yellow;
+    margin: auto;
+    padding: 0 10px;
+    caret-color: white;
+}
+::placeholder{
+    text-align: center;
+}
+.searchIcon, .clearIcon{
+    color: yellow;
+}
+
+/* __________Filter box_________________________________________ */
+.filter{
+    margin: 0px 5% 10px 5%;
+    color: yellow;
+}
+.min,
+.max,
+.categoryFilter{
+    width: 33%;
+    height: 50px;
+    background: rgba(56, 55, 56, 0.918);
+    border: 1px solid yellow;
+    margin: auto;
+    padding: 0 5px;
+    caret-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clearFilter{
+    background: none;
+    color: yellow;
+}
+/* __________SubMenu____________________________________________ */
+.searchBtn,
+.filterBtn,
+.sortBtn{
+    width: 20%;
+    height: 50px;
+    font-size: 20px;
+    margin: 0 5px 15px 5px;
+}
+.sortSelector{
+    margin: 0;
+    padding: 0;
+}
+/* __________Go Up Button____________________________________________ */
+.goUp{
+    position: absolute;
+    background: yellow;
+    border: 2px solid red;
+    color: black;
+    padding: 0 5px;
+    border-radius: 50%;
+    top: 90%;
+    left: 90%;
+}
+
+/* ============================================================================== */
+/* ============================================================================== */
+
+.cashierPage{
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgba(56, 55, 56, 0.918);
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: yellow;
+    color: black;
+    padding: 10px;
+    margin-top: 0;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+}
+nav div{
+    font-weight: bold;
+    border-left: 3px solid black;
+}
+
+/* ============================================================================== */
+/* ============================================================================== */
+/* To hide the pages */
+.cashierPage,
+.adminPage,
+.addInfo,
+.staffMgt,
+.booking,
+.partner,
+.update,
+.search,
+.filter,
+.noProduct,
+.noBooking{
+    display: none;
+}

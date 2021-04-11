@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Project</title>
+    <link rel="stylesheet" href="CSS/hover.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="JS/app.js" defer></script>
+</head>
+<body>
+    <!-- ______________________Login Page______________________ -->
+    <div class="loginPage">
+        <div class="img">
+            <img src="Pictures/logo.jpg" alt="" id="logo">
+            <img src="Pictures/shopPic.png" alt="">
+        </div>
+        <div class="loginOption">
+            <h2 class="hvr-grow">SuperMarket System Management</h2>
+            <button type="button" class="hvr-grow" id="adminUser">Admin Login</button><br>
+            <button type="button" class="hvr-grow" id="cashierUser">Cashier Login</button>
+        </div>
+    </div>
+
+    <!-- ______________________Admin Page______________________ -->
+    <div class="adminPage">
+        <div class="menu">
+            <h3>Menu</h3>
+            <div class="task fa fa-product-hunt" id="listProducts"> Products List   <span class="numPro"></span></div>
+            <div class="task fa fa-plus" id="addNew"> Add Product​</div>
+            <div class="task fa fa-inbox" id="booking"> Customer Booking   <span class="numInbox"></span></div>
+            <div class="task fa fa-user" id="staffs"> Staffs Management</div>
+            <div class="task fa fa-handshake-o" id="partners"> Partners</div>
+            <div class="task fa fa-sign-out" id="toLogOut"> Logout​</div>
+        </div>
+        <div class="information">
+            <h3>Detail Information</h3>
+            <!-- ______________________Product List Part______________________ -->
+            <div class="proList">
+                <div class="subMenu">
+                    <button type="button" class="searchBtn">Search</button>
+                    <button type="button" class="filterBtn">Filter</button>
+                    <select name="sortSelector"class="sortBtn">
+                        <option selected>Sort By...</option>
+                        <option value="id" id="id">ID Sort</option>
+                        <option value="name" id="name">NAME Sort</option>
+                        <option value="price" id="price">PRICE Sort</option>
+                        <option value="amount" id="amount">AMOUNT Sort</option>
+                    </select>
+
+                </div>
+                <div class="search">
+                    <div class="searchIcon fa fa-search hvr-grow"></div>
+                    <input type="text" placeholder="Search here by NAME" id="searchBox">
+                    <div class="clearIcon fa fa-times-circle hvr-grow"></div>
+                </div>
+                <form action="#" class="filter">
+                    <div class="min">
+                        <label for="#">Min Price: </label><input type="number" id="minInput">
+                    </div>
+                    <div class="max">
+                        <label for="#">Max Price: </label><input type="number" id="maxInput">
+                    </div>
+                    <div class="categoryFilter">
+                        <label>Category : </label>
+                        <select name="category" id="categoryInput">
+                            <option value="none" selected></option>
+                            <option value="Food">Food</option>
+                            <option value="Meterial">Meterial</option>
+                            <option value="Fashion">Fashion</option>
+                        </select>
+                    </div>
+                    <button type="reset" class="clearFilter"><i class="fa fa-times-circle hvr-grow"></i></button>
+                </form>
+                <div class="goUp fa fa-angle-up fa-2x hvr-grow"></div>
+                <div class="noProduct">Empty</div>
+                <div class="item">
+                    <div class="price">10$</div>
+                    <div class="info">
+                        <div class="name">Nike Shoe</div>
+                        <div class="id">HS 1</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">100</div>
+                    </div>
+                    <div class="category">Fashion</div>
+                    <div class="modify">
+                        <div class="edit fa fa-pencil-square-o hvr-grow"></div>
+                        <div class="delete fa fa-trash hvr-grow"></div>
+                    </div>
+                    <span class="description">Famous and good price. At 3st floor</span>
+                </div>
+                <div class="item">
+                    <div class="price">11$</div>
+                    <div class="info">
+                        <div class="name">Adidas Shoes</div>
+                        <div class="id">HS 2</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">10</div>
+                    </div>
+                    <div class="category">Fashion</div>
+                    <div class="modify">
+                        <div class="edit fa fa-pencil-square-o hvr-grow"></div>
+                        <div class="delete fa fa-trash hvr-grow"></div>
+                    </div>
+                    <span class="description">Very famous shoes. At 3st floor</span>
+                </div>
+                <div class="item">
+                    <div class="price">5$</div>
+                    <div class="info">
+                        <div class="name">Banana</div>
+                        <div class="id">HS 3</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">20</div>
+                    </div>
+                    <div class="category">Food</div>
+                    <div class="modify">
+                        <div class="edit fa fa-pencil-square-o hvr-grow"></div>
+                        <div class="delete fa fa-trash hvr-grow"></div>
+                    </div>
+                    <span class="description">Khmer food, good for health. At 1st floor</span>
+                </div>
+                <div class="item">
+                    <div class="price">500$</div>
+                    <div class="info">
+                        <div class="name">MC Bike</div>
+                        <div class="id">HS 4</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">15</div>
+                    </div>
+                    <div class="category">Meterial</div>
+                    <div class="modify">
+                        <div class="edit fa fa-pencil-square-o hvr-grow"></div>
+                        <div class="delete fa fa-trash hvr-grow"></div>
+                    </div>
+                    <span class="description">New brand, nice to use. At 2st floor</span>
+                </div>
+                <div class="item">
+                    <div class="price">2$</div>
+                    <div class="info">
+                        <div class="name">Vital</div>
+                        <div class="id">HS 5</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">20</div>
+                    </div>
+                    <div class="category">Food</div>
+                    <div class="modify">
+                        <div class="edit fa fa-pencil-square-o hvr-grow"></div>
+                        <div class="delete fa fa-trash hvr-grow"></div>
+                    </div>
+                    <span class="description">Good for health, the best quality. At 1st floor</span>
+                </div>
+                <div class="item">
+                    <div class="price">3$</div>
+                    <div class="info">
+                        <div class="name">Mask</div>
+                        <div class="id">HS 6</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">200</div>
+                    </div>
+                    <div class="category">Meterial</div>
+                    <div class="modify">
+                        <div class="edit fa fa-pencil-square-o hvr-grow"></div>
+                        <div class="delete fa fa-trash hvr-grow"></div>
+                    </div>
+                    <span class="description">Created by famous hospital. At 2st floor</span>
+                </div>
+                <div class="item">
+                    <div class="price">30$</div>
+                    <div class="info">
+                        <div class="name">Headset</div>
+                        <div class="id">HS 7</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">50</div>
+                    </div>
+                    <div class="category">Meterial</div>
+                    <div class="modify">
+                        <div class="edit fa fa-pencil-square-o hvr-grow"></div>
+                        <div class="delete fa fa-trash hvr-grow"></div>
+                    </div>
+                    <span class="description">Good Sound. At 2st floor</span>
+                </div>
+                <div class="item">
+                    <div class="price">49.99$</div>
+                    <div class="info">
+                        <div class="name">Hatari</div>
+                        <div class="id">HS 8</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">200</div>
+                    </div>
+                    <div class="category">Meterial</div>
+                    <div class="modify">
+                        <div class="edit fa fa-pencil-square-o hvr-grow"></div>
+                        <div class="delete fa fa-trash hvr-grow"></div>
+                    </div>
+                    <span class="description">Nice to use for long time. At 2st floor</span>
+                </div>
+            </div>
+            <!-- ______________________Add New Product Part______________________ -->
+            <div class="addInfo">
+                <form name="formAdd">
+                    <div>
+                        <label>Name Of Product : </label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label>Price : </label>
+                        <input type="number" id="price" name="price" required>
+                    </div>
+                    <div>
+                        <label>Amount : </label>
+                        <input type="number" id="amount" name="amount" min="1" required>
+                    </div>
+                    <div>
+                        <label>Category : </label>
+                        <select name="category" id="category">
+                            <option value="Food" selected>Food</option>
+                            <option value="Meterial">Meterial</option>
+                            <option value="Fashion">Fashion</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Best Before : </label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div>
+                        <label>Message : </label>
+                        <textarea name="message" id="message" required></textarea>
+                    </div>
+                    <button type="reset" class="reset hvr-grow">Clear</button>
+                    <button type="button" class="add hvr-grow">Add</button>
+                    <button type="button" class="update hvr-grow">Update</button>
+                </form>
+            </div>
+            <!-- ______________________Customer Booking Part______________________ -->
+            <div class="booking">
+                <div class="noBooking">Empty</div>
+                <div class="item">
+                    <div class="price">10$</div>
+                    <div class="info">
+                        <div class="name">Nike Shoe</div>
+                        <div class="id">HS 1</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">5</div>
+                    </div>
+                    <div class="category">Fashion</div>
+                    <div class="delivered">Delivered</div>
+                </div>
+                <div class="item">
+                    <div class="price">5$</div>
+                    <div class="info">
+                        <div class="name">Banana</div>
+                        <div class="id">HS 3</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">7</div>
+                    </div>
+                    <div class="category">Food</div>
+                    <div class="delivered">Delivered</div>
+                </div>
+                <div class="item">
+                    <div class="price">2$</div>
+                    <div class="info">
+                        <div class="name">Vital</div>
+                        <div class="id">HS 5</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">8</div>
+                    </div>
+                    <div class="category">Food</div>
+                    <div class="delivered">Delivered</div>
+                </div>
+                <div class="item">
+                    <div class="price">3$</div>
+                    <div class="info">
+                        <div class="name">Mask</div>
+                        <div class="id">HS 6</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">1</div>
+                    </div>
+                    <div class="category">Meterial</div>
+                    <div class="delivered">Delivered</div>
+                </div>
+                <div class="item">
+                    <div class="price">49.99$</div>
+                    <div class="info">
+                        <div class="name">Hatari</div>
+                        <div class="id">HS 8</div>
+                        <div class="date">2022-12-12</div>
+                        <div class="amount">1</div>
+                    </div>
+                    <div class="category">Meterial</div>
+                    <div class="delivered">Delivered</div>
+                </div>
+            </div>
+            <!-- ______________________Staff Management Part______________________ -->
+            <div class="staffMgt">Staff</div>
+            <!-- ______________________Partner Part______________________ -->
+            <div class="partner">Partner</div>
+            <!-- ______________________Logout Part______________________ -->
+            <div class="logOut"></div>
+        </div>
+    </div>
+
+    <!-- ______________________Cashier Page______________________ -->
+    <div class="cashierPage">
+        <nav>
+            <div class="bill">Billing Page</div>
+            <div class="general">General Page</div>
+            <div class="logoutCashier">Logout=></div>
+        </nav>
+    </div>
+</body>
+</html>
